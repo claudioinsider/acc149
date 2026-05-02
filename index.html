@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="W. R. V. Foods Pizzaria Ltda - Restaurante, pizzaria e fornecimento de alimentos em Vinhedo - SP.">
+<meta name="keywords" content="pizzaria, restaurante, pizza, Vinhedo, SP, W.R.V. Foods, comida delivery">
+<meta name="author" content="W. R. V. Foods Pizzaria Ltda">
+<meta name="geo.region" content="BR-SP">
+<meta name="geo.placename" content="Vinhedo">
+<title>W.R.V. Foods Pizzaria | Vinhedo – SP</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23c1121f'/><text y='.9em' font-size='60' font-family='Georgia,serif' font-weight='900' fill='%23ffd60a' x='18'>W</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --rosso:#c1121f;
+  --rosso-dark:#8b0a13;
+  --rosso-light:#fce4e6;
+  --gold:#ffd60a;
+  --gold-dark:#e5b800;
+  --cream:#fffbf0;
+  --warm:#f5ece0;
+  --charcoal:#2b2118;
+  --brown:#6b4c3b;
+  --gray:#7a6a60;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--charcoal);overflow-x:hidden;}
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-thumb{background:var(--rosso);border-radius:3px;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(43,33,24,0.97);backdrop-filter:blur(10px);}
+.nav-inner{max-width:1200px;margin:0 auto;padding:.9rem 4vw;display:flex;justify-content:space-between;align-items:center;}
+.logo{display:flex;align-items:center;gap:.8rem;text-decoration:none;}
+.logo-flame{width:42px;height:42px;background:var(--rosso);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;}
+.logo-name{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:900;color:var(--gold);line-height:1;}
+.logo-sub{font-size:.62rem;color:rgba(255,255,255,.5);letter-spacing:2px;text-transform:uppercase;}
+.nav-links{display:flex;gap:2rem;list-style:none;}
+.nav-links a{font-size:.87rem;font-weight:500;color:rgba(255,255,255,.65);text-decoration:none;letter-spacing:.5px;transition:color .25s;}
+.nav-links a:hover{color:var(--gold);}
+.nav-cta{background:var(--rosso)!important;color:white!important;padding:.45rem 1.2rem;border-radius:4px;font-weight:600!important;transition:background .25s!important;}
+.nav-cta:hover{background:var(--rosso-dark)!important;color:white!important;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:5px;}
+.hamburger span{display:block;width:22px;height:2px;background:rgba(255,255,255,.7);}
+
+/* HERO */
+#inicio{min-height:100vh;display:flex;align-items:center;padding:100px 4vw 60px;position:relative;overflow:hidden;
+  background:radial-gradient(ellipse 80% 70% at 50% 100%,rgba(193,18,31,.18) 0%,transparent 65%),
+  linear-gradient(160deg,var(--charcoal) 0%,#3d1a10 60%,#1a0a05 100%);}
+.hero-texture{position:absolute;inset:0;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px;}
+.pizza-bg{position:absolute;right:-80px;top:50%;transform:translateY(-50%);font-size:320px;opacity:.04;line-height:1;user-select:none;}
+.hero-inner{max-width:1200px;margin:0 auto;position:relative;z-index:1;max-width:680px;}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,214,10,.3);color:var(--gold);padding:.35rem 1rem;border-radius:30px;font-size:.75rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:1.5rem;}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,5.5vw,5rem);font-weight:900;color:white;line-height:1.05;margin-bottom:1.2rem;}
+.hero h1 .gold{color:var(--gold);}
+.hero h1 em{font-style:italic;}
+.hero-desc{font-size:1.05rem;line-height:1.75;color:rgba(255,255,255,.65);max-width:480px;margin-bottom:2.5rem;}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;}
+.btn-rosso{display:inline-flex;align-items:center;gap:8px;background:var(--rosso);color:white;padding:.9rem 2rem;border-radius:4px;font-weight:600;font-size:.92rem;text-decoration:none;transition:all .3s;border:none;cursor:pointer;}
+.btn-rosso:hover{background:var(--rosso-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(193,18,31,.5);}
+.btn-gold{display:inline-flex;align-items:center;gap:8px;border:2px solid var(--gold);color:var(--gold);padding:.9rem 2rem;border-radius:4px;font-weight:600;font-size:.92rem;text-decoration:none;transition:all .3s;}
+.btn-gold:hover{background:rgba(255,214,10,.1);}
+.hero-strip{display:flex;gap:2.5rem;margin-top:3.5rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.1);}
+.hs-item .num{font-family:'Playfair Display',serif;font-size:2rem;color:var(--gold);font-weight:900;line-height:1;}
+.hs-item .lbl{font-size:.75rem;color:rgba(255,255,255,.45);letter-spacing:1.5px;text-transform:uppercase;margin-top:.2rem;}
+
+/* SOBRE */
+#sobre{padding:90px 4vw;background:var(--cream);}
+.sobre-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
+.sobre-visual{position:relative;}
+.sobre-plate{background:var(--warm);border-radius:0 60px 0 60px;padding:3rem;border:1px solid rgba(193,18,31,.1);position:relative;}
+.sobre-plate::before{content:'🍕';position:absolute;top:-20px;right:30px;font-size:3rem;filter:drop-shadow(0 4px 8px rgba(0,0,0,.2));}
+.feature-list{display:flex;flex-direction:column;gap:.8rem;margin-top:1.5rem;}
+.feat-item{display:flex;align-items:center;gap:.8rem;padding:.8rem 1rem;background:white;border-radius:10px;border-left:3px solid var(--rosso);}
+.feat-icon{font-size:1.2rem;flex-shrink:0;}
+.feat-item span{font-size:.88rem;color:var(--brown);font-weight:500;}
+.kicker{font-size:.73rem;font-weight:700;color:var(--rosso);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:.6rem;display:flex;align-items:center;gap:.5rem;}
+.kicker::before{content:'';display:block;width:24px;height:1.5px;background:var(--rosso);}
+.sobre-text h2{font-family:'Playfair Display',serif;font-size:2.2rem;color:var(--charcoal);margin-bottom:1.2rem;line-height:1.2;}
+.sobre-text p{font-size:.95rem;line-height:1.8;color:var(--gray);margin-bottom:1rem;}
+.cnpj-tag{display:inline-flex;align-items:center;gap:.6rem;background:var(--rosso-light);padding:.5rem 1rem;border-radius:6px;margin-top:.8rem;}
+.cnpj-tag span{font-size:.78rem;color:var(--rosso-dark);font-weight:700;}
+
+/* CARDÁPIO */
+#cardapio{padding:90px 4vw;background:var(--charcoal);}
+.sec-hd{text-align:center;margin-bottom:3.5rem;}
+.sec-hd .kicker{justify-content:center;}
+.sec-hd h2{font-family:'Playfair Display',serif;font-size:2.3rem;color:white;}
+.sec-hd p{color:rgba(255,255,255,.5);font-size:.95rem;max-width:480px;margin:.8rem auto 0;}
+.card-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.menu-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:2rem 1.6rem;transition:all .3s;position:relative;overflow:hidden;}
+.menu-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--rosso);transform:scaleX(0);transform-origin:left;transition:transform .35s;}
+.menu-card:hover{background:rgba(255,255,255,.07);transform:translateY(-5px);}
+.menu-card:hover::after{transform:scaleX(1);}
+.menu-icon{font-size:2.5rem;margin-bottom:1rem;display:block;}
+.menu-card h3{font-family:'Playfair Display',serif;font-size:1.15rem;color:white;margin-bottom:.5rem;}
+.menu-card p{font-size:.87rem;color:rgba(255,255,255,.5);line-height:1.65;}
+.menu-tag{display:inline-block;background:rgba(193,18,31,.25);color:rgba(255,200,200,.9);font-size:.68rem;padding:.2rem .6rem;border-radius:4px;margin-bottom:.6rem;font-weight:600;letter-spacing:.5px;}
+
+/* DEPOIMENTOS */
+#depoimentos{padding:90px 4vw;background:var(--warm);}
+.dep-grid{max-width:1200px;margin:2.5rem auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.dep-card{background:white;border-radius:16px;padding:2rem;box-shadow:0 2px 16px rgba(0,0,0,.06);transition:transform .3s;position:relative;}
+.dep-card::before{content:'\201C';font-family:Georgia,serif;font-size:4.5rem;color:var(--rosso);opacity:.15;position:absolute;top:.5rem;left:1.4rem;line-height:1;}
+.dep-card:hover{transform:translateY(-4px);}
+.dep-stars{color:var(--gold-dark);font-size:.85rem;margin-bottom:1rem;}
+.dep-text{font-style:italic;font-size:.9rem;line-height:1.75;color:var(--gray);margin-bottom:1.5rem;}
+.dep-author{display:flex;align-items:center;gap:.8rem;}
+.dep-av{width:38px;height:38px;background:var(--rosso);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1rem;color:white;font-weight:700;}
+.dep-name{font-weight:600;font-size:.87rem;color:var(--charcoal);}
+.dep-role{font-size:.77rem;color:var(--gray);}
+
+/* CONTATO */
+#contato{padding:90px 4vw;background:var(--charcoal);}
+.ct-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1.2fr;gap:5rem;}
+.ct-info .kicker{color:var(--gold);}
+.ct-info .kicker::before{background:var(--gold);}
+.ct-info h2{font-family:'Playfair Display',serif;font-size:2.2rem;color:white;margin-bottom:1rem;}
+.ct-info p{color:rgba(255,255,255,.55);font-size:.93rem;line-height:1.7;margin-bottom:2rem;}
+.ct-item{display:flex;align-items:flex-start;gap:1rem;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,.07);}
+.ct-item:last-of-type{border:none;}
+.ct-icon{width:36px;height:36px;background:rgba(193,18,31,.2);border:1px solid rgba(193,18,31,.3);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0;}
+.ct-item h4{font-size:.7rem;font-weight:700;color:var(--rosso);letter-spacing:2px;text-transform:uppercase;margin-bottom:.2rem;}
+.ct-item p,.ct-item a{font-size:.9rem;color:rgba(255,255,255,.6);text-decoration:none;}
+.ct-item a:hover{color:var(--gold);}
+.form-box{background:var(--cream);border-radius:20px;padding:2.5rem;}
+.form-box h3{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--charcoal);margin-bottom:1.5rem;}
+.fg{margin-bottom:1rem;}
+.fg label{display:block;font-size:.72rem;font-weight:600;color:var(--gray);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:.4rem;}
+.fg input,.fg textarea,.fg select{width:100%;border:1.5px solid rgba(0,0,0,.1);border-radius:8px;padding:.8rem 1rem;font-family:'Jost',sans-serif;font-size:.92rem;color:var(--charcoal);outline:none;transition:border .3s;background:white;}
+.fg input:focus,.fg textarea:focus{border-color:var(--rosso);}
+.fg select option{background:white;}
+.form-row2{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.btn-f{width:100%;padding:.95rem;background:var(--rosso);color:white;border:none;border-radius:8px;font-family:'Jost',sans-serif;font-weight:700;font-size:.95rem;cursor:pointer;transition:background .25s;margin-top:.5rem;}
+.btn-f:hover{background:var(--rosso-dark);}
+.fok{display:none;background:#fce4e6;color:var(--rosso-dark);border-radius:8px;padding:.9rem;text-align:center;font-size:.88rem;font-weight:600;margin-top:.8rem;}
+
+/* FOOTER */
+footer{background:#100a06;color:rgba(255,255,255,.4);padding:50px 4vw 28px;border-top:1px solid rgba(193,18,31,.2);}
+.fi{max-width:1200px;margin:0 auto;}
+.ft{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.06);}
+.fb h2{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--gold);margin-bottom:.7rem;}
+.fb p{font-size:.83rem;color:rgba(255,255,255,.4);line-height:1.7;max-width:300px;margin-bottom:1rem;}
+.fo{background:rgba(193,18,31,.07);border:1px solid rgba(193,18,31,.18);border-radius:8px;padding:.9rem 1.1rem;}
+.fo-lbl{font-size:.63rem;font-weight:700;color:rgba(255,214,10,.7);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:.4rem;}
+.fo p{font-size:.79rem;color:rgba(255,255,255,.4);line-height:1.7;}
+.fo strong{color:rgba(255,255,255,.6);}
+.fc h4{font-size:.7rem;font-weight:700;color:rgba(255,214,10,.7);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:1rem;}
+.fc ul{list-style:none;display:flex;flex-direction:column;gap:.55rem;}
+.fc ul a{font-size:.85rem;color:rgba(255,255,255,.4);text-decoration:none;transition:color .25s;}
+.fc ul a:hover{color:var(--gold);}
+.fb2{padding-top:1.8rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.fb2 p{font-size:.76rem;color:rgba(255,255,255,.28);}
+.fb2 strong{color:rgba(255,255,255,.45);}
+.fl{display:flex;gap:1.5rem;}
+.fl a{font-size:.76rem;color:rgba(255,255,255,.28);text-decoration:none;transition:color .25s;}
+.fl a:hover{color:var(--gold);}
+
+/* MODAL */
+.modal-overlay{display:none;position:fixed;inset:0;z-index:9000;background:rgba(0,0,0,.85);backdrop-filter:blur(6px);overflow-y:auto;padding:4vh 4vw;}
+.modal-overlay.open{display:flex;align-items:flex-start;justify-content:center;}
+.modal-box{background:white;max-width:800px;width:100%;border-radius:16px;padding:3rem;position:relative;margin:auto;}
+.mc{position:absolute;top:1.2rem;right:1.5rem;background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--gray);}
+.mc:hover{color:var(--rosso);}
+.modal-box h2{font-family:'Playfair Display',serif;font-size:1.9rem;color:var(--charcoal);margin-bottom:.4rem;}
+.mu{font-size:.77rem;color:var(--gray);margin-bottom:1.8rem;}
+.modal-box h3{font-size:.8rem;font-weight:700;color:var(--rosso);letter-spacing:1.5px;text-transform:uppercase;margin:1.8rem 0 .5rem;}
+.modal-box p,.modal-box li{font-size:.88rem;line-height:1.8;color:#555;}
+.modal-box ul{padding-left:1.2rem;margin-top:.4rem;}
+.mcd{background:var(--rosso-light);border-left:3px solid var(--rosso);padding:.9rem 1.1rem;border-radius:0 8px 8px 0;margin:1rem 0;}
+hr.mdiv{border:none;border-top:1px solid #e5e5e5;margin:2rem 0;}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease;}
+.reveal.visible{opacity:1;transform:none;}
+
+@media(max-width:900px){
+  .nav-links{display:none;}.hamburger{display:flex;}
+  .nav-links.open{display:flex;flex-direction:column;position:absolute;top:60px;left:0;right:0;background:var(--charcoal);padding:1.5rem 4vw;gap:1rem;}
+  .sobre-grid{grid-template-columns:1fr;}.sobre-visual{display:none;}
+  .card-grid{grid-template-columns:1fr 1fr;}.dep-grid{grid-template-columns:1fr;}
+  .ct-grid{grid-template-columns:1fr;}.ft{grid-template-columns:1fr;}.form-row2{grid-template-columns:1fr;}
+}
+@media(max-width:560px){.card-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#inicio" class="logo">
+      <div class="logo-flame">🍕</div>
+      <div><div class="logo-name">W.R.V. Foods</div><div class="logo-sub">Pizzaria</div></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#cardapio">Cardápio</a></li>
+      <li><a href="#depoimentos">Avaliações</a></li>
+      <li><a href="#contato" class="nav-cta">Pedir Agora</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section id="inicio">
+  <div class="hero-texture"></div>
+  <div class="pizza-bg">🍕</div>
+  <div class="hero-inner" style="position:relative;z-index:1;">
+    <div class="hero-tag">🍕 Vinhedo · São Paulo</div>
+    <h1>A pizza <em>perfeita</em><br>chega até <span class="gold">você</span></h1>
+    <p class="hero-desc">Pizzas artesanais, pratos saborosos e bebidas geladas. Do restaurante à sua porta, com sabor e carinho em cada preparo.</p>
+    <div class="hero-btns">
+      <a href="#contato" class="btn-rosso">🛵 Pedir Delivery</a>
+      <a href="#cardapio" class="btn-gold">Ver Cardápio →</a>
+    </div>
+    <div class="hero-strip">
+      <div class="hs-item"><div class="num">🍕</div><div class="lbl">Sabores variados</div></div>
+      <div class="hs-item"><div class="num">🚀</div><div class="lbl">Entrega rápida</div></div>
+      <div class="hs-item"><div class="num">⭐</div><div class="lbl">Alta qualidade</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="sobre-grid">
+    <div class="sobre-visual reveal">
+      <div class="sobre-plate">
+        <div class="kicker">Nossa cozinha</div>
+        <p style="font-size:.9rem;color:var(--brown);line-height:1.7;">Ingredientes selecionados, massa preparada diariamente e muito amor em cada fatia que sai da nossa cozinha para a sua mesa.</p>
+        <div class="feature-list">
+          <div class="feat-item"><span class="feat-icon">🧀</span><span>Ingredientes frescos diariamente</span></div>
+          <div class="feat-item"><span class="feat-icon">🔥</span><span>Massa artesanal tradicional</span></div>
+          <div class="feat-item"><span class="feat-icon">🛵</span><span>Delivery rápido na região</span></div>
+          <div class="feat-item"><span class="feat-icon">🥤</span><span>Bebidas e acompanhamentos</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="sobre-text reveal">
+      <div class="kicker">Sobre nós</div>
+      <h2>Sabor que faz você voltar sempre</h2>
+      <p>A <strong>W. R. V. Foods Pizzaria Ltda</strong> é especializada em restaurantes e similares, comércio varejista de bebidas e fornecimento de alimentos para consumo domiciliar em Vinhedo, SP.</p>
+      <p>Trabalhamos com paixão para entregar o melhor da culinária italiana adaptada ao paladar brasileiro — pizzas, pratos quentes e muito mais, seja no salão ou em delivery.</p>
+      <div class="cnpj-tag"><span>CNPJ: 48.311.295/0001-43 · Situação: ATIVA</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="cardapio">
+  <div class="sec-hd reveal">
+    <div class="kicker" style="justify-content:center;color:var(--gold);"><span style="background:var(--gold);display:block;width:24px;height:1.5px;"></span>Nosso Cardápio</div>
+    <h2>O que preparamos para você</h2>
+    <p>Sabores que encantam desde a primeira mordida.</p>
+  </div>
+  <div class="card-grid">
+    <div class="menu-card reveal"><div class="menu-tag">Destaque</div><span class="menu-icon">🍕</span><h3>Pizzas Artesanais</h3><p>Tradicionais, especiais e veganas com bordas crocantes e recheios generosos preparados diariamente.</p></div>
+    <div class="menu-card reveal"><span class="menu-icon">🍝</span><h3>Massas e Risotos</h3><p>Espaguetes, fetuccines e risotos cremosos preparados com ingredientes italianos selecionados.</p></div>
+    <div class="menu-card reveal"><div class="menu-tag">Delivery</div><span class="menu-icon">🍱</span><h3>Marmitas e Quentinhas</h3><p>Refeições completas para consumo domiciliar, nutritivas e saborosas para o dia a dia.</p></div>
+    <div class="menu-card reveal"><span class="menu-icon">🥗</span><h3>Saladas e Entradas</h3><p>Antepastos, saladas frescas e entradas para completar a sua refeição com estilo.</p></div>
+    <div class="menu-card reveal"><span class="menu-icon">🥤</span><h3>Bebidas</h3><p>Refrigerantes, sucos, cervejas e água. Bebemos junto com você!</p></div>
+    <div class="menu-card reveal"><div class="menu-tag">Favorito</div><span class="menu-icon">🍮</span><h3>Sobremesas</h3><p>Tiramisù, panna cotta e opções especiais para fechar com chave de ouro.</p></div>
+  </div>
+</section>
+
+<section id="depoimentos">
+  <div class="sec-hd reveal" style="max-width:1200px;margin:0 auto 0;">
+    <div class="kicker" style="justify-content:center;">Avaliações</div>
+    <h2 style="font-family:'Playfair Display',serif;font-size:2.2rem;color:var(--charcoal);">O que nossos clientes dizem</h2>
+  </div>
+  <div class="dep-grid">
+    <div class="dep-card reveal"><div class="dep-stars">★★★★★</div><p class="dep-text">"A melhor pizza de Vinhedo! Massa crocante, recheio generoso e entrega super rápida. Já virou meu pedido de toda sexta-feira."</p><div class="dep-author"><div class="dep-av">L</div><div><div class="dep-name">Luciana M.</div><div class="dep-role">Moradora de Vinhedo</div></div></div></div>
+    <div class="dep-card reveal"><div class="dep-stars">★★★★★</div><p class="dep-text">"Pedi delivery e chegou quentinho, bem embalado e delicioso. Pizza de calabresa perfeita. Recomendo para todo mundo!"</p><div class="dep-author"><div class="dep-av">P</div><div><div class="dep-name">Paulo R.</div><div class="dep-role">Cliente fiel</div></div></div></div>
+    <div class="dep-card reveal"><div class="dep-stars">★★★★★</div><p class="dep-text">"Fizemos um jantar em família e o pedido foi enorme, atenderam tudo certinho, no prazo e com qualidade impecável. Parabéns!"</p><div class="dep-author"><div class="dep-av">A</div><div><div class="dep-name">Ana C.</div><div class="dep-role">Santa Rosa – Vinhedo</div></div></div></div>
+  </div>
+</section>
+
+<section id="contato">
+  <div class="ct-grid">
+    <div class="ct-info reveal">
+      <div class="kicker">Fale conosco</div>
+      <h2>Faça seu Pedido</h2>
+      <p>Entre em contato, faça seu pedido ou reserve sua mesa. Estamos prontos para atendê-lo!</p>
+      <div class="ct-item"><div class="ct-icon">📍</div><div><h4>Endereço</h4><p>R ANESIO AUGUSTO DO AMARAL, 160<br>SANTA ROSA – VINHEDO – SP<br>CEP: 13.289-158</p></div></div>
+      <div class="ct-item"><div class="ct-icon">📞</div><div><h4>Telefone</h4><a href="tel:+551981731181">(19) 8173-1181</a></div></div>
+      <div class="ct-item"><div class="ct-icon">✉️</div><div><h4>E-mail</h4><a href="mailto:PIZZALATOSCANA@YAHOO.COM">PIZZALATOSCANA@YAHOO.COM</a></div></div>
+      <div class="ct-item"><div class="ct-icon">🕐</div><div><h4>Funcionamento</h4><p>Terça a Domingo: 18h – 23h<br>Delivery até 22h30</p></div></div>
+    </div>
+    <div class="form-box reveal">
+      <h3>Envie sua mensagem</h3>
+      <form id="cForm" onsubmit="sendForm(event)">
+        <div class="form-row2">
+          <div class="fg"><label>Nome</label><input type="text" placeholder="Seu nome" required></div>
+          <div class="fg"><label>Telefone</label><input type="tel" placeholder="(19) 9 0000-0000" required></div>
+        </div>
+        <div class="fg"><label>E-mail</label><input type="email" placeholder="seu@email.com"></div>
+        <div class="fg"><label>Pedido ou mensagem</label><textarea rows="5" placeholder="Descreva seu pedido ou dúvida..." required></textarea></div>
+        <button type="submit" class="btn-f">🍕 Enviar Mensagem</button>
+        <div class="fok" id="formOk">✓ Mensagem enviada! Entraremos em contato em breve.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fi">
+    <div class="ft">
+      <div class="fb">
+        <h2>W.R.V. Foods Pizzaria</h2>
+        <p>Pizzas artesanais, restaurante e delivery em Vinhedo/SP. Sabor, qualidade e entrega rápida para você e sua família.</p>
+        <div class="fo">
+          <div class="fo-lbl">Dados Oficiais</div>
+          <p><strong>W. R. V. FOODS PIZZARIA LTDA</strong><br>CNPJ: <strong>48.311.295/0001-43</strong><br>R ANESIO AUGUSTO DO AMARAL, 160<br>SANTA ROSA – VINHEDO – SP<br>CEP: 13.289-158<br>Tel: (19) 8173-1181<br>E-mail: PIZZALATOSCANA@YAHOO.COM</p>
+        </div>
+      </div>
+      <div class="fc"><h4>Cardápio</h4><ul><li><a href="#cardapio">Pizzas Artesanais</a></li><li><a href="#cardapio">Massas e Risotos</a></li><li><a href="#cardapio">Marmitas</a></li><li><a href="#cardapio">Bebidas</a></li><li><a href="#cardapio">Sobremesas</a></li></ul></div>
+      <div class="fc"><h4>Institucional</h4><ul><li><a href="#sobre">Sobre Nós</a></li><li><a href="#contato">Contato</a></li><li><a href="#" onclick="openModal('priv')">Política de Privacidade</a></li><li><a href="#" onclick="openModal('terms')">Termos de Uso</a></li></ul></div>
+    </div>
+    <div class="fb2">
+      <div><p>© 2026 <strong>W. R. V. FOODS PIZZARIA LTDA</strong> - Todos os direitos reservados.</p><p>CNPJ: <strong>48.311.295/0001-43</strong> · R ANESIO AUGUSTO DO AMARAL, 160, SANTA ROSA, VINHEDO – SP, CEP: 13.289-158 · Tel: (19) 8173-1181</p></div>
+      <div class="fl"><a href="#" onclick="openModal('priv')">Privacidade</a><a href="#" onclick="openModal('terms')">Termos</a></div>
+    </div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="modal-priv">
+  <div class="modal-box"><button class="mc" onclick="closeModal('priv')">✕</button>
+    <h2>Política de Privacidade</h2><p class="mu">Última atualização: abril de 2026</p>
+    <div class="mcd"><p><strong>W. R. V. FOODS PIZZARIA LTDA</strong> | CNPJ: 48.311.295/0001-43<br>R ANESIO AUGUSTO DO AMARAL, 160 – SANTA ROSA – VINHEDO – SP – CEP: 13.289-158<br>Tel: (19) 8173-1181 | E-mail: PIZZALATOSCANA@YAHOO.COM</p></div>
+    <h3>1. Controlador</h3><p>W. R. V. Foods Pizzaria Ltda, CNPJ 48.311.295/0001-43, é responsável pelo tratamento dos dados pessoais deste site.</p>
+    <h3>2. Dados coletados</h3><p>Coletamos nome, telefone, e-mail e mensagem ao preencher o formulário de contato.</p>
+    <h3>3. Finalidade</h3><p>Dados usados exclusivamente para atender pedidos, reservas e contato comercial.</p>
+    <h3>4. Compartilhamento</h3><p>Não vendemos ou compartilhamos dados com terceiros, exceto por obrigação legal.</p>
+    <h3>5. Direitos LGPD</h3><p>Solicite acesso, correção ou exclusão dos seus dados pelo e-mail PIZZALATOSCANA@YAHOO.COM.</p>
+    <hr class="mdiv"><p style="font-size:.78rem;color:#aaa;">© 2026 W. R. V. FOODS PIZZARIA LTDA – CNPJ 48.311.295/0001-43</p>
+  </div>
+</div>
+<div class="modal-overlay" id="modal-terms">
+  <div class="modal-box"><button class="mc" onclick="closeModal('terms')">✕</button>
+    <h2>Termos de Uso</h2><p class="mu">Última atualização: abril de 2026</p>
+    <div class="mcd"><p><strong>W. R. V. FOODS PIZZARIA LTDA</strong> | CNPJ: 48.311.295/0001-43<br>R ANESIO AUGUSTO DO AMARAL, 160 – SANTA ROSA – VINHEDO – SP – CEP: 13.289-158</p></div>
+    <h3>1. Aceitação</h3><p>Ao acessar este site, você concorda com estes Termos de Uso.</p>
+    <h3>2. Sobre a empresa</h3><p>Site da W. R. V. Foods Pizzaria Ltda, CNPJ 48.311.295/0001-43, situação ATIVA, atuante em restaurantes, pizzaria e delivery.</p>
+    <h3>3. Uso do site</h3><p>Site informativo e comercial. Pedidos são confirmados via contato direto. Proibido uso para fins ilícitos.</p>
+    <h3>4. Disponibilidade e preços</h3><p>Cardápio e preços sujeitos a alteração sem aviso prévio. Confirme diretamente antes do pedido.</p>
+    <h3>5. Foro</h3><p>Fica eleito o foro da Comarca de Vinhedo – SP.</p>
+    <hr class="mdiv"><p style="font-size:.78rem;color:#aaa;">© 2026 W. R. V. FOODS PIZZARIA LTDA – CNPJ 48.311.295/0001-43</p>
+  </div>
+</div>
+
+<script>
+const hb=document.getElementById('hamburger'),nl=document.getElementById('navLinks');
+hb.addEventListener('click',()=>nl.classList.toggle('open'));
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>nl.classList.remove('open')));
+const obs=new IntersectionObserver((es)=>es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*70);obs.unobserve(e.target);}}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+function sendForm(e){e.preventDefault();const b=e.target.querySelector('button');b.textContent='Enviando...';b.disabled=true;setTimeout(()=>{document.getElementById('formOk').style.display='block';b.textContent='🍕 Enviar Mensagem';b.disabled=false;e.target.reset();setTimeout(()=>document.getElementById('formOk').style.display='none',5000);},1000);}
+function openModal(id){event.preventDefault();document.getElementById('modal-'+id).classList.add('open');document.body.style.overflow='hidden';}
+function closeModal(id){document.getElementById('modal-'+id).classList.remove('open');document.body.style.overflow='';}
+document.querySelectorAll('.modal-overlay').forEach(m=>m.addEventListener('click',e=>{if(e.target===m){m.classList.remove('open');document.body.style.overflow='';}}));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.modal-overlay.open').forEach(m=>{m.classList.remove('open');document.body.style.overflow='';});});
+</script>
+</body>
+</html>
